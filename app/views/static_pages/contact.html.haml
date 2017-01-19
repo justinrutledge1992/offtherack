@@ -1,1 +1,29 @@
-%h1 CONTACT
+- provide(:title, '| Contact')
+%section{:id => "pageTitle"}
+  %div.container
+    %div.row
+      %div{:id => "titleBox", :class => "col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3"}
+        %h1 Contact
+%section{:id => "pageBarOne"}
+  %div.container
+    %div.row
+      %div{:class => "col-lg-4 col-md-4 col-sm-4 centerfy"}
+        %h1 Business Hours:
+        %p Monday: 10am-6pm
+        %p Tuesday: 12pm-8pm
+        %p Wednesday - Friday: 10am-6pm
+        %p Saturday: 10am-2pm
+        %p Sunday: Closed
+      %div{:class => "col-lg-4 col-md-4 col-sm-4 centerfy"}
+        %h1 Contact Us:
+        %p Rachel Rutledge
+        %p rachel@jrutledge.net
+        %p (256) 555-5555
+      %div{:class => "col-lg-4 col-md-4 col-sm-4 centerfy"}
+        %h1 Learn More:
+        = form_tag("/submit_email", method: "get") do
+          = label_tag :email, "Join Our Mailing List!"
+          %p
+            = email_field_tag :email
+            = submit_tag "Submit", class: "btn btn-default"
+%iframe{:allowfullscreen => "", :frameborder => "0", :height => "350px", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyD4ORisi3tUNGAWEz98w2WqaFfJLOPghlQ&q=703 Pratt Ave NW Suite 304, Huntsville, AL 35801", :style => "border:0", :width => "100%"}

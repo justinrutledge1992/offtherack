@@ -1,1 +1,25 @@
-%h1 CONSIGNMENT
+- provide(:title, '| Consign')
+%section{:id => "pageTitle"}
+  %div.container
+    %div.row
+      %div{:id => "titleBox", :class => "col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3"}
+        %h1 How To Consign
+%section{:id => "pageBarOne"}
+  %div.container
+    %div.row
+      %div{:class => "col-lg-6 col-md-6 col-sm-6"}
+        %p Thank you for your interest in consigning with Off The Rack! We accept new and gently used items each TUESDAY (no appointment needed) that are currently in-style and like-new condition. Items should be in excellent condition with buttons, hooks, straps, and zippers in working order and free from debris and odor. Acceptable clothing will be free from spots/stains, pulls and rips. Items must be received on hangers and pressed if needed. OTR will set up your personal account, label items and present you with a consignment agreement (including tracking list for your convenience). Items will be chosen based on ability to sell and those which will compliment our existing inventory. Please note, all items may not be accepted for reasons listed above. 
+      %div{:class => "col-lg-6 col-md-6 col-sm-6"}
+        %p Accepted items will be available for sale for 6 months. Items will be priced between 30-40% of retail prices. Inventory is computerized. The consignor and OTR will both receive 50% of the selling price. Upon sale, payment is applied directly into your account and will remain there until you request payout. You may request to have a check mailed to you at the end of the month or you can stop by the store to pick up a check mid-month. Consignors must contact OTR to inquire about items that have sold.
+        = link_to "Qustions? Contact us!", contact_path, class: "bigFont"
+%section{:id => "pageBarTwo"}
+  %div.container
+    %div.row
+      %div{:class => "pageBarTextBlock-a"}
+        %p
+          %em Off The Rack is not responsible for the loss of consigned articles through fire, theft, vandalism, or natural disaster. All sales are final. Off The Rack has a NO-RETURN policy.  
+%section{:id => "pageBarTwo"}
+  %div.container
+    %div.row
+      %div{:class => "pageBarTextBlock-b"}
+        %p Consignors are welcomed and encouraged to share our website and/or social media sites with others! The more people aware of OTR, the more likely your items will sell in a timely manner. So spread the word and let’s make some sales! 

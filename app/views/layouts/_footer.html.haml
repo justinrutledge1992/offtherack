@@ -1,2 +1,14 @@
 / Footer
-%br Copyright © Off The Rack 2017. All Rights Reserved.
+%section{:id => "socialMediaBar"}
+  %div.container
+    %div.row
+      %hr
+      %p Follow Us
+      = link_to facebook_path, class: "btn" do
+        %i.fa.fa-facebook-square.fa-5x{"aria-hidden" => "true"}
+      = link_to instagram_path, class: "btn" do
+        %i.fa.fa-instagram.fa-5x{"aria-hidden" => "true"}
+      = link_to twitter_path, class: "btn" do
+        %i.fa.fa-twitter-square.fa-5x{"aria-hidden" => "true"}
+#footer.p-y-4
+  Copyright © Off The Rack 2017. All Rights Reserved.

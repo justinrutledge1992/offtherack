@@ -20,6 +20,9 @@ gem "jquery-scrollto-rails", "~> 1.4"
 gem 'masonry-rails', "~> 0.2"
 gem 'nprogress-rails', "~> 0.2"
 
+# Adds vector-based icon libarary
+gem 'font-awesome-sass'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 3.0'
 

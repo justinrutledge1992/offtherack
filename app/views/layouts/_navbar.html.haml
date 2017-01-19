@@ -1,0 +1,15 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .nav-container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#offtherack-nav-links", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "Off The Rack", root_path, class: "navbar-brand", id: "serrifize"
+    #offtherack-nav-links.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        /%li= link_to "About", about_path, id: "serrifize"
+        %li= link_to "Gallery", gallery_path, id: "serrifize"
+        %li= link_to "How To Consign", consignment_path, id: "serrifize"
+        %li= link_to "Contact", contact_path, id: "serrifize"

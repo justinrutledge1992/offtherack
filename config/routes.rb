@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'photos_controller/new'
+
+  get 'photos_controller/create'
+
+  get 'photos_controller/destroy'
+
   root 'static_pages#index'
   
   get 'index'           => 'static_pages#index'
@@ -10,9 +16,14 @@ Rails.application.routes.draw do
   
   get 'contact'         => 'static_pages#contact'
   
-  get 'upload_photo'   => 'application#uploadPhoto'
-  get 'submit_email'   => 'application#submitEmailAddress'
+  get 'upload_photo'    => 'application#uploadPhoto'
+  get 'submit_email'    => 'application#submitEmailAddress'
   
+  get 'facebook'        => 'application#routeToFacebook'
+  get 'instagram'       => 'application#routeToInstagram'
+  get 'twitter'         => 'application#routeToTwitter'
+  
+  resources :photos, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

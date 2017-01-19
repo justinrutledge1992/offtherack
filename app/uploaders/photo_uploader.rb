@@ -7,7 +7,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   
   #if Rails.env.test? || Rails.env.development?
-    storage :file
+  storage :file
   #else
   #  storage :fog
   #end
@@ -46,5 +46,4 @@ class PhotoUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
-
 end

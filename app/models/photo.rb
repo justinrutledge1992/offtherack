@@ -5,4 +5,5 @@ class Photo < ActiveRecord::Base
     ###### Validations ######
     validates :image,
         presence: true
+    
 end

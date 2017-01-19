@@ -1,0 +1,18 @@
+- provide(:title, '| New Photo')
+%section{:id => "pageTitle"}
+  %div.container
+    %div.row
+      %div{:id => "titleBox", :class => "col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3"}
+        %h1 New Photo
+%section{:id => "pageBarOne"}
+  %div.container
+    %div.row
+      %div{:class => "pageBarTextBlock-b"}
+        = form_for(@photo) do |f|
+          %p.leftify
+            = f.file_field :image
+          %p.leftify
+            = f.label :checktext, "Password:"
+            = f.text_field :checktext
+          %p.leftify
+            = f.submit "Submit", class: "btn btn-default"

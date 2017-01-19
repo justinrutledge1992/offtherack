@@ -3,30 +3,32 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-  def uploadPhoto
-    @photo = Photo.new
-    @photo.image = params[:image]
-    
-    if @photo.save
-      flash[:success] = "Photo Uploaded!"
-      redirect_to gallery_path
-    else
-      flash[:danger] = "Unable to Upload Photo"
-      redirect_to gallery_path
-    end
-  end
-  
   def submitEmailAddress
     @email = EmailAddress.new
     @email.email = params[:email]
     
-    if @email.save
+    if EmailAddress.find_by(email: @email.email) != nil
+      flash[:warning] = "Your Email Address is Already on Record"
+      redirect_to contact_path
+    elsif @email.save
       flash[:success] = "Email Address Submitted!"
       redirect_to contact_path
     else
       flash[:danger] = "Unable to Submit Email Address"
       redirect_to contact_path
     end
+  end
+  
+  def routeToFacebook
+    redirect_to "https://www.facebook.com/OffTheRackClothes"
+  end
+  
+  def routeToInstagram
+    redirect_to "https://www.instagram.com/offtherack256/"
+  end
+  
+  def routeToTwitter
+    redirect_to "https://www.twitter.com/offtherack256"
   end
   
 end
