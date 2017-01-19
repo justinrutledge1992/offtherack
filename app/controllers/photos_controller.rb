@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     
-    if (@photo.checktext == "foobar")
+    if (checktextMatches(@photo.checktext))
       if @photo.save
         flash[:success] = "Photo Uploaded!"
         redirect_to new_photo_path
@@ -29,6 +29,10 @@ class PhotosController < ApplicationController
   
        def photo_params
          params.require(:photo).permit(:checktext, :image)
+       end
+       
+       def checktextMatches(str)
+         return str == "password"
        end
   
 end
