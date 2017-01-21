@@ -32,7 +32,7 @@ class PhotosController < ApplicationController
        end
        
        def checktextMatches(str)
-         return str == "password"
+         return str == "offtherack35801"
        end
   
 end
