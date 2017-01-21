@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'photos_controller/new'
-
-  get 'photos_controller/create'
-
-  get 'photos_controller/destroy'
 
   root 'static_pages#index'
   
@@ -17,7 +11,11 @@ Rails.application.routes.draw do
   get 'contact'         => 'static_pages#contact'
   
   get 'upload_photo'    => 'application#uploadPhoto'
+  get 'edit_gallery'    => 'static_pages#edit_gallery'
+  get 'destroy_photo'   => 'photos#destroy'
+  get 'admin'           => 'static_pages#admin'
   get 'submit_email'    => 'application#submitEmailAddress'
+  get 'mailing_list'    => 'static_pages#mailing_list'
   
   get 'facebook'        => 'application#routeToFacebook'
   get 'instagram'       => 'application#routeToInstagram'

@@ -17,8 +17,8 @@
       %div{:class => "col-lg-4 col-md-4 col-sm-4 centerfy"}
         %h1 Contact Us:
         %p Rachel Rutledge
-        %p rachel@jrutledge.net
-        %p (256) 555-5555
+        %p offtherack@jrutledge.net
+        %p (256) 886-8304
       %div{:class => "col-lg-4 col-md-4 col-sm-4 centerfy"}
         %h1 Learn More:
         = form_tag("/submit_email", method: "get") do
@@ -26,4 +26,5 @@
           %p
             = email_field_tag :email
             = submit_tag "Submit", class: "btn btn-default"
+%h1 Map:
 %iframe{:allowfullscreen => "", :frameborder => "0", :height => "350px", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyD4ORisi3tUNGAWEz98w2WqaFfJLOPghlQ&q=703 Pratt Ave NW Suite 304, Huntsville, AL 35801", :style => "border:0", :width => "100%"}

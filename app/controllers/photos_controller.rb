@@ -23,6 +23,13 @@ class PhotosController < ApplicationController
   end
 
   def destroy
+    if Photo.find(params[:id]).destroy
+      flash[:success] = "Photo Deleted!"
+      redirect_to edit_gallery_path
+    else
+      flash[:danger] = "Unable to Delete Photo"
+      redirect_to edit_gallery_path
+    end
   end
   
   private
