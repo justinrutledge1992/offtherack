@@ -14,3 +14,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+function download_list(){
+    window.open ('download_mailing_list')
+}

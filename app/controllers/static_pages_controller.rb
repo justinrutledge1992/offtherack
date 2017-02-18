@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
   
+  before_action :redirect_if_not_admin, only: [:edit_gallery, :mailing_list]
+  
   def index
   end
 

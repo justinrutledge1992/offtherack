@@ -2,24 +2,27 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   
-  get 'index'           => 'static_pages#index'
-  get 'about'           => 'static_pages#about'
-  get 'gallery'         => 'static_pages#gallery'
-  get 'consignment'     => 'static_pages#consignment'
-  get 'contact'         => 'static_pages#contact'
+  get 'index'                 => 'static_pages#index'
+  get 'about'                 => 'static_pages#about'
+  get 'gallery'               => 'static_pages#gallery'
+  get 'consignment'           => 'static_pages#consignment'
+  get 'contact'               => 'static_pages#contact'
   
-  get 'contact'         => 'static_pages#contact'
+  get 'contact'               => 'static_pages#contact'
   
-  get 'upload_photo'    => 'application#uploadPhoto'
-  get 'edit_gallery'    => 'static_pages#edit_gallery'
-  get 'destroy_photo'   => 'photos#destroy'
-  get 'admin'           => 'static_pages#admin'
-  get 'submit_email'    => 'application#submitEmailAddress'
-  get 'mailing_list'    => 'static_pages#mailing_list'
+  get 'upload_photo'          => 'application#uploadPhoto'
+  get 'edit_gallery'          => 'static_pages#edit_gallery'
+  get 'destroy_photo'         => 'photos#destroy'
+  get 'admin'                 => 'static_pages#admin'
+  get 'admin_login'           => 'application#admin_login'
+  get 'admin_logout'          => 'application#admin_logout'
+  get 'submit_email'          => 'application#submitEmailAddress'
+  get 'mailing_list'          => 'static_pages#mailing_list'
+  get 'download_mailing_list' => 'application#download_mailing_list'
   
-  get 'facebook'        => 'application#routeToFacebook'
-  get 'instagram'       => 'application#routeToInstagram'
-  get 'twitter'         => 'application#routeToTwitter'
+  get 'facebook'              => 'application#routeToFacebook'
+  get 'instagram'             => 'application#routeToInstagram'
+  get 'twitter'               => 'application#routeToTwitter'
   
   resources :photos, only: [:new, :create, :destroy]
 

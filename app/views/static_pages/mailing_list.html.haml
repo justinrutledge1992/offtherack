@@ -1,3 +1,4 @@
+- provide(:title, '| Mailing List')
 %section{:id => "homepageTitle"}
   %div.container
     %div.row
@@ -7,6 +8,8 @@
 %section{:id => "pageBarOne"}
   %div.container
     %div.row
+      %div
+        %p.centerfy= link_to "Download List", "", :onclick => "download_list(); return false"
       %div{:class => "pageBarTextBlock-b bigFont"}
         -@addresses.each do |ad|
           =ad.email
