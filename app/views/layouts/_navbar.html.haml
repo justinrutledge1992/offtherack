@@ -9,9 +9,9 @@
       = link_to "Off The Rack Boutique", root_path, class: "navbar-brand", id: "serrifize"
     #offtherack-nav-links.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
-        /%li= link_to "About", about_path, id: "serrifize"
-        %li= link_to "Gallery", gallery_path, id: "serrifize"
         %li= link_to "How To Consign", consignment_path, id: "serrifize"
+        %li= link_to "Gallery", gallery_path, id: "serrifize"
+        %li= link_to "About", about_path, id: "serrifize"
         %li= link_to "Contact", contact_path, id: "serrifize"
         - if user_is_admin
           %li= link_to "Admin", admin_path, id: "serrifize"
