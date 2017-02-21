@@ -1,9 +1,11 @@
 / Footer
+
 %section{:id => "socialMediaBar"}
   %div.container
     %div.row
       %hr
-      %p Follow Us
+      #footer.p-y-4
+        %img= image_tag "otr_logo_small.png", id: "footerLogo"
       = link_to facebook_path, class: "btn" do
         %i.fa.fa-facebook-square.fa-5x{"aria-hidden" => "true"}
       = link_to instagram_path, class: "btn" do
