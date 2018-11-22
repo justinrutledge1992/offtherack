@@ -108,6 +108,10 @@ p {
   font-size: 14pt;
 }
 
+#homepageHoursBox {
+  margin-top: -140px;
+}
+
 #titleBox {
   background-color: rgba(239, 248, 255, 0.5);
   padding: 20px;
@@ -125,6 +129,13 @@ p {
 
 .leftify {
   text-align: left;
+}
+
+.boldify {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #000000;
 }
 
 #pageTitle {
